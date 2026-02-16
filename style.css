@@ -1,1 +1,215 @@
+@charset "UTF-8";
 
+/* ===================================
+   ベース設定 (全体共通)
+   =================================== */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+    color: #ff3366; /* アクセントカラーのピンク */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 画像をレスポンシブにする魔法の設定 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* ===================================
+   レイアウト枠 (PCでは幅制限・中央寄せ)
+   =================================== */
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* ===================================
+   ヘッダー
+   =================================== */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* スマホで折り返す設定 */
+}
+
+#site h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#site h1 a { color: #fff; }
+
+#site h2 {
+    margin: 5px 0 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ccc;
+}
+
+/* ナビゲーションメニュー */
+#nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+#nav li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+#nav li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #ff3366;
+}
+
+/* ===================================
+   メインビジュアル (プロフィール)
+   =================================== */
+#hero {
+    display: flex; /* 横並び */
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-image {
+    flex: 1; /* 比率 */
+    max-width: 350px;
+    margin-right: 40px;
+}
+.hero-image img {
+    border-radius: 8px; /* 角を少し丸く */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin-top: 0;
+    border-bottom: 3px solid #ff3366;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-link {
+    display: inline-block;
+    background-color: #ff3366;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ===================================
+   コンテンツエリア (Activity / Contact)
+   =================================== */
+#content {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.section-box {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.section-box h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 30px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #fff;
+}
+.btn:hover {
+    background: #333;
+    color: #fff !important;
+}
+
+/* ===================================
+   フッター
+   =================================== */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/* ===================================
+   スマホ対応 (画面幅768px以下)
+   =================================== */
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #nav {
+        margin-top: 15px;
+        width: 100%;
+    }
+    #nav ul {
+        justify-content: center;
+    }
+    
+    #hero {
+        flex-direction: column; /* 縦並びにする */
+        padding: 20px;
+    }
+    .hero-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    
+    #content {
+        flex-direction: column; /* 縦並び */
+        padding: 20px;
+    }
+}
