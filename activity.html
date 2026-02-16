@@ -6,14 +6,12 @@
     <title>Activity - SMA*POTO</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 全実績を網羅するための専用スタイル */
         .activity-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
         }
-
         .activity-card {
             background: #fff;
             border: 1px solid #eee;
@@ -23,37 +21,34 @@
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-
-        /* 画像を一切切り抜かず、全体を表示する設定 */
+        /* 画像を一切切り抜かず、全体を表示する設定（左上の数値維持） */
         .img-box {
             width: 100%;
-            height: 160px;
-            background: #ebebeb; /* 余白をグレーにして数値を見やすく */
+            height: 180px;
+            background: #f0f0f0; 
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 5px;
         }
-
         .img-box img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* 画像全体を表示（左上の数値も切れません） */
+            object-fit: contain;
         }
-
         .text-box {
-            padding: 12px;
+            padding: 15px;
             text-align: left;
             font-size: 13px;
+            flex-grow: 1;
         }
-
         .text-box h4 {
-            margin: 0 0 5px 0;
-            font-size: 14px;
+            margin: 0 0 8px 0;
+            font-size: 15px;
             color: #ff3366;
             border-bottom: 1px solid #eee;
-            padding-bottom: 3px;
+            padding-bottom: 5px;
         }
-
         h3.category-title {
             border-left: 6px solid #333;
             padding-left: 15px;
@@ -82,7 +77,7 @@
     <section id="hero">
         <div class="hero-text">
             <h2>Activity Archive</h2>
-            <p>2000年〜2013年：全実績リスト</p>
+            <p>PDF資料に基づいた全実績の完全復元</p>
         </div>
     </section>
 
@@ -90,44 +85,44 @@
 
         <h3 class="category-title">Android App Development</h3>
         <div class="activity-grid">
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/01.png"></div><div class="text-box"><h4>ネットで流れた怖い話</h4><p>読み物系アプリの先駆けとして開発。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/02.png"></div><div class="text-box"><h4>電波回復</h4><p>実質2行のコードで185万以上の売上を記録。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/03.png"></div><div class="text-box"><h4>バッテロイド</h4><p>バッテリー管理の定番シリーズ。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/04.png"></div><div class="text-box"><h4>ゴキブリバリア</h4><p>超音波による虫除け（ジョーク）アプリ。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/05.png"></div><div class="text-box"><h4>Modokiシリーズ</h4><p>様々な機能を「もどき」として再現したシリーズ。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/06.png"></div><div class="text-box"><h4>Stop Crying Baby</h4><p>赤ちゃんの泣き止み支援アプリ。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/android/07.png"></div><div class="text-box"><h4>SMA*POTO</h4><p>本ポートフォリオサイト表示用のガワアプリ。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/01.png"></div><div class="text-box"><h4>ネットで流れた怖い話</h4><p>読み物系アプリの先駆け。1年間で20アプリリリースの起点となった作品。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/02.png"></div><div class="text-box"><h4>電波回復</h4><p>コード2行で185万OVERの売上を記録。時間帯効果の高さがメディアでも話題に。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/03.png"></div><div class="text-box"><h4>バッテロイド</h4><p>バッテリー管理アプリの定番シリーズ。実用性とデザインを両立。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/04.png"></div><div class="text-box"><h4>ゴキブリバリア</h4><p>超音波による虫除け（ジョーク）アプリ。遊び心のある企画開発。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/05.png"></div><div class="text-box"><h4>Modokiシリーズ</h4><p>様々な機能を「もどき」として提供。計11の実験的サイト運営と並行して開発。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/06.png"></div><div class="text-box"><h4>Stop Crying Baby</h4><p>赤ちゃんの泣き止み支援。BtoCサービスのノウハウを凝縮。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/android/07.png"></div><div class="text-box"><h4>SMA*POTO</h4><p>本ポートフォリオサイトを表示するための専用アプリ。</p></div></div>
         </div>
 
         <h3 class="category-title">Media & Interviews</h3>
         <div class="activity-grid">
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/11.png"></div><div class="text-box"><h4>週刊SPA! 6位</h4><p>副業ランキングにてインタビュー掲載。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/07.png"></div><div class="text-box"><h4>ASCII.jp 取材</h4><p>「顔の見えるインターネット」成功戦略特集。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/06.png"></div><div class="text-box"><h4>TV「バズトーク」</h4><p>番組内でココローグが紹介された際の資料。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/10.png"></div><div class="text-box"><h4>雑誌掲載実績集</h4><p>20冊以上のランキング雑誌に掲載された実績。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/01.png"></div><div class="text-box"><h4>お〜いお茶 優秀賞</h4><p>自作俳句が全国の茶缶に掲載されました。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/02.png"></div><div class="text-box"><h4>ネトラン 初掲載</h4><p>ネットランナー誌に初めて掲載された際の記事。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/03.png"></div><div class="text-box"><h4>100人編集長マップ</h4><p>ネトラン100人編集長企画の全体マップ。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/08.png"></div><div class="text-box"><h4>カルマからの挑戦状</h4><p>ネトラン100人編集長として執筆した記事。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/09.png"></div><div class="text-box"><h4>面白動画50連発</h4><p>ASCII.jpにてお正月恒例の大型執筆記事。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/04.png"></div><div class="text-box"><h4>ココローグ掲載集</h4><p>多方面の雑誌で紹介された際のまとめ資料。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/media/05.png"></div><div class="text-box"><h4>ウイルスバスター優秀賞</h4><p>トレンドマイクロ社のコンテストにて受賞。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/01.png"></div><div class="text-box"><h4>お〜いお茶 優秀賞</h4><p>第十一回伊藤園新俳句大賞。「あれもしたいこれもしたいぞ大冬木」が茶缶に掲載。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/11.png"></div><div class="text-box"><h4>週刊SPA! 6位</h4><p>「資産家だけが知っている金持ち副業ランキング」にて月収200万円で受賞。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/07.png"></div><div class="text-box"><h4>ASCII.jp「顔の見えるインターネット」</h4><p>古田雄介氏による取材。ココローグ管理人の成功戦略が特集される。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/06.png"></div><div class="text-box"><h4>TV「バズトーク」出演</h4><p>番組内でココローグが注目の「エンタメ系ニュースブログ」として紹介。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/05.png"></div><div class="text-box"><h4>ウイルスバスター優秀賞</h4><p>トレンドマイクロ社の記事コンテスト。ブログの企画力が評価された実績。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/10.png"></div><div class="text-box"><h4>雑誌掲載実績 20冊以上</h4><p>2012年末までに各種Android系雑誌に無料アプリ紹介として多数掲載。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/02.png"></div><div class="text-box"><h4>ネトラン 初掲載</h4><p>ネットランナー誌にて初めて活動がピックアップされた際の記事。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/03.png"></div><div class="text-box"><h4>100人編集長マップ</h4><p>ネトラン企画。100人の編集長がネットの今を斬る全体図に参画。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/08.png"></div><div class="text-box"><h4>カルマからの挑戦状</h4><p>100人編集長企画にて執筆した専門記事。独特の切り口で構成。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/09.png"></div><div class="text-box"><h4>お正月面白動画50連発</h4><p>ASCII.jpにて執筆。トレンドの動画を独自の視点でまとめた大型連載。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/media/04.png"></div><div class="text-box"><h4>ココローグ掲載集</h4><p>多様な雑誌でココローグが紹介された際のアーカイブ資料。</p></div></div>
         </div>
 
         <h3 class="category-title">Web & Writing</h3>
         <div class="activity-grid">
-            <div class="activity-card"><div class="img-box"><img src="img/activity/web/01.png"></div><div class="text-box"><h4>ココローグ (100万PV)</h4><p>最高月間100万PVを達成したメインメディア。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/web/09.png"></div><div class="text-box"><h4>あんこじ</h4><p>自社Androidアプリのポータルサイト運営。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/writing/03.png"></div><div class="text-box"><h4>YouTube大辞典</h4><p>書籍化企画としてノミネートされた企画資料。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/writing/02.png"></div><div class="text-box"><h4>企業案件PR記事</h4><p>アルファブロガーとしての企業PR執筆実績。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/web/10.png"></div><div class="text-box"><h4>パロディ商品販売</h4><p>ドロップシッピングを活用した企画・販売。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/web/01.png"></div><div class="text-box"><h4>ココローグ (100万PV)</h4><p>SEOにこだわりページランク5を達成したメインメディア。月間100万PVを記録。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/web/09.png"></div><div class="text-box"><h4>あんこじ</h4><p>開発したAndroidアプリを体系的にまとめたポータルサイトの運営。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/writing/03.png"></div><div class="text-box"><h4>YouTube大辞典</h4><p>ネトラン書籍化企画にてノミネート。動画時代の先駆け的企画。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/writing/02.png"></div><div class="text-box"><h4>企業案件PR記事</h4><p>アルファブロガーとして、数々の商品モニターや新サービス紹介記事を執筆。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/web/10.png"></div><div class="text-box"><h4>パロディ商品販売</h4><p>ドロップシッピングを活用。パロディ系グッズの企画・販売実績。</p></div></div>
         </div>
 
         <h3 class="category-title">Other</h3>
         <div class="activity-grid">
-            <div class="activity-card"><div class="img-box"><img src="img/activity/other/02.png"></div><div class="text-box"><h4>駆け込み演劇祭</h4><p>近大・阪大・大工大3校演劇祭の企画長実績。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/other/04.png"></div><div class="text-box"><h4>ペタリンガー参画</h4><p>Webコミュニティ構築への中心的な関わり。</p></div></div>
-            <div class="activity-card"><div class="img-box"><img src="img/activity/other/05.png"></div><div class="text-box"><h4>SEGA トライアル参加</h4><p>公式バーチャル空間サービスの招待ブロガー。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/other/02.png"></div><div class="text-box"><h4>駆け込み演劇祭</h4><p>近大・阪大・大工大3校演劇祭の企画長。組織運営の原点となった活動。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/other/05.png"></div><div class="text-box"><h4>SEGA トライアル参加</h4><p>新サービスの公式発表の場にブロガーとして招待・参加。</p></div></div>
+            <div class="activity-card"><div class="img-box"><img src="img/activity/other/04.png"></div><div class="text-box"><h4>ペタリンガー参画</h4><p>ココローグ管理人として、Webコミュニティ形成のプロジェクトへ参加。</p></div></div>
         </div>
 
     </section>
