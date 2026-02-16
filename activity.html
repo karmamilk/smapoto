@@ -6,7 +6,7 @@
     <title>Activity - SMA*POTO - YaneDaisuke Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* レイアウトの安定化 */
+        /* activity.html専用の追加レイアウト */
         #content { display: block; padding: 20px; }
         
         .category-header {
@@ -22,7 +22,7 @@
         .activity-list {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 50px;
         }
 
         .activity-item {
@@ -31,23 +31,23 @@
             border: 1px solid #eee;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        /* 画像全体を表示し、左上の実績値を維持 */
+        /* 画像ボックス：contain設定で左上の文字を保護 */
         .img-box {
-            width: 350px;
-            min-width: 350px;
+            width: 380px;
+            min-width: 380px;
             background: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 15px;
         }
         .img-box img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain;
+            object-fit: contain; /* 画像全体を表示 */
         }
 
         .text-box {
@@ -69,18 +69,12 @@
             margin: 0 0 15px;
             color: #333;
         }
-        .detail-info {
-            background: #fff9fa;
-            border-left: 3px solid #ff3366;
-            padding: 12px 15px;
-            font-size: 14px;
-            color: #555;
-            margin-top: 10px;
-        }
+        .text-box strong { color: #000; }
 
+        /* スマホ対応 */
         @media screen and (max-width: 850px) {
             .activity-item { flex-direction: column; }
-            .img-box { width: 100%; min-width: 0; height: 250px; }
+            .img-box { width: 100%; min-width: 0; height: 300px; }
         }
     </style>
 </head>
@@ -103,7 +97,7 @@
     <section id="hero">
         <div class="hero-text">
             <h2>Activity Log</h2>
-            <p>学業・本業以外で行っていた企画・個人活動の実績（学生時代〜2013年）</p>
+            <p>学業・本業以外で行っていた企画・個人活動の実績アーカイブ</p>
         </div>
     </section>
 
@@ -112,72 +106,71 @@
         <div class="category-section">
             <div class="category-header">
                 <h3>Media</h3>
-                <p>2000〜2013年：テレビ/雑誌/WEBなどのメディア掲載・受賞実績</p>
+                <p>2000〜2013年：テレビ/雑誌/WEB等の掲載・受賞実績</p>
             </div>
             
             <div class="activity-list">
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/11.png"></div>
+                    <div class="img-box"><img src="img/activity/media/11.png" alt="週刊SPA!"></div>
                     <div class="text-box">
-                        <h4>週刊SPA! 掲載・インタビュー</h4>
-                        [cite_start]<p>2013/8/27発売号の特集「資産家だけが知っている『金持ち副業』ランキング」にて月収200万円で6位を受賞[span_0](end_span)[span_1](end_span)[span_2](start_span)[span_3](start_span)。時間帯効果が高く、月収換算でこのレベルの副業となっていた[span_2](end_span)[span_3](end_span)。</p>
-                        [span_4](start_span)[span_5](start_span)<div class="detail-info">特に「電波回復」は実質2行のコードで185万OVERの売上を記録し、大きな話題を呼んだ[span_4](end_span)[span_5](end_span)。</div>
+                        <h4>週刊SPA! インタビュー掲載</h4>
+                        <p>2013/8/27発売号の特集<strong>「資産家だけが知っている『金持ち副業』ランキング」</strong>にて、月収200万円で<strong>6位</strong>を受賞。時間帯効果が極めて高いことから月収換算でこのレベルの副業となっていた。特に「電波回復」はコード2行で185万OVERの売上を記録し、大きな話題を呼んだ。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/10.png"></div>
+                    <div class="img-box"><img src="img/activity/media/10.png" alt="Android系雑誌"></div>
                     <div class="text-box">
                         <h4>各種 Android系雑誌 掲載</h4>
-                        [span_6](start_span)[span_7](start_span)<p>2012年末時点で20以上の雑誌に掲載[span_6](end_span)[span_7](end_span)[span_8](start_span)[span_9](start_span)。「注目アプリ」「エンタメ」「書籍」等のジャンルで、「ネットで流れた怖い話」が定番アプリとして多数紹介された[span_8](end_span)[span_9](end_span)。</p>
+                        <p>2012年末時点で20以上の雑誌に掲載。「注目アプリ」「エンタメ」「書籍」のいずれかのジャンルで、無料アプリ「ネットで流れた怖い話」が定番として半ページ〜1コマレベルで取り上げられた。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/09.png"></div>
+                    <div class="img-box"><img src="img/activity/media/09.png" alt="ASCII.jp 執筆"></div>
                     <div class="text-box">
-                        <h4>ASCII.jp 記事執筆</h4>
-                        [span_10](start_span)[span_11](start_span)<p>WEBサイト「ASCII.jp」のお正月企画で「お正月に観たい面白動画50連発」を執筆[span_10](end_span)[span_11](end_span)[span_12](start_span)。5つのカテゴリに分けて50の動画を独自の視点でセレクトした[span_12](end_span)。</p>
+                        <h4>ASCII.jp お正月特集執筆</h4>
+                        <p>WEBサイト「ASCII.jp」のお正月企画<strong>「お正月に観たい面白動画50連発」</strong>を執筆。おバカ、衝撃、お遊び、ハプニング、悶絶のカテゴリに分けて50動画をセレクトした。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/03.png"></div>
+                    <div class="img-box"><img src="img/activity/media/03.png" alt="ネットランナー"></div>
                     <div class="text-box">
-                        <h4>ネットランナー 100人編集長</h4>
-                        [span_13](start_span)[span_14](start_span)<p>雑誌「ネットランナー」の企画「100人編集長」に参加し、「ココローグ・カルマからの挑戦状」を連載[span_13](end_span)[span_14](end_span)[span_15](start_span)。動画で読者と競うおバカ競技企画を展開した[span_15](end_span)。</p>
+                        <h4>ネットランナー 特集連載・所属</h4>
+                        <p>雑誌「ネットランナー」の「100人編集長」企画に参加し、<strong>「ココローグ・カルマからの挑戦状」</strong>を連載。ビールのストロー早飲み、ヤクルト30本暴飲、メガネ飛ばし等の動画競技を公開した。同誌「ベスト・オブ・常習者サイト 2006 動画部門」にもノミネート。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/07.png"></div>
+                    <div class="img-box"><img src="img/activity/media/07.png" alt="ASCII.jp インタビュー"></div>
                     <div class="text-box">
-                        <h4>ASCII.jp インタビュー</h4>
-                        [span_16](start_span)[span_17](start_span)<p>連載「顔の見えるインターネット」第38回に「ココローグ管理人の成功戦略」として掲載[span_16](end_span)[span_17](end_span)[span_18](start_span)[span_19](start_span)。ページランク「5」を達成したSEO戦略を公開[span_18](end_span)[span_19](end_span)。</p>
+                        <h4>ASCII.jp インタビュー掲載</h4>
+                        <p>「古田雄介の“顔の見えるインターネット” 第38回」にて<strong>「ココローグ管理人の成功戦略」</strong>を特集。就活生必読の内容として、ページランク「5」を達成したSEO戦略やキーワード選定を公開。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/06.png"></div>
+                    <div class="img-box"><img src="img/activity/media/06.png" alt="バズトーク"></div>
                     <div class="text-box">
                         <h4>TV番組「バズトーク」出演</h4>
-                        [span_20](start_span)[span_21](start_span)<p>神奈川テレビの番組にて、運営する「ココローグ」が「エンタメ系ニュースブログ」として紹介された[span_20](end_span)[span_21](end_span)。</p>
+                        <p>神奈川テレビ×BLOG TIMESの番組「バズトーク」にて、自身の運営するブログ「ココローグ」が<strong>「エンタメ系ニュースブログ」</strong>として全国に紹介された。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/05.png"></div>
+                    <div class="img-box"><img src="img/activity/media/05.png" alt="ウイルスバスターコンテスト"></div>
                     <div class="text-box">
                         <h4>ウイルスバスターコンテスト 優勝</h4>
-                        [span_22](start_span)[span_23](start_span)<p>トレンドマイクロ社主催の記事コンテストで優勝[span_22](end_span)[span_23](end_span)[span_24](start_span)[span_25](start_span)。タイトルは「史上最悪のウイルスとは・・・?」[span_24](end_span)[span_25](end_span)。</p>
+                        <p>トレンドマイクロ社主催の「ウイルスの脅威」記事コンテストにて「ココローグ」が優勝。タイトルは「[恐怖] 史上最悪のウイルスとは・・・?」。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/media/01.png"></div>
+                    <div class="img-box"><img src="img/activity/media/01.png" alt="お〜いお茶"></div>
                     <div class="text-box">
                         <h4>お〜いお茶新俳句大賞 優秀賞</h4>
-                        [span_26](start_span)[span_27](start_span)<p>第十一回伊藤園 お〜いお茶新俳句大賞にて優秀賞を受賞[span_26](end_span)[span_27](end_span)[span_28](start_span)。作品「あれもしたいこれもしたいぞ大冬木」が茶缶に掲載された[span_28](end_span)。</p>
+                        <p>高校2年時、第十一回伊藤園 お〜いお茶新俳句大賞にて優秀賞を受賞。作品<strong>「あれもしたいこれもしたいぞ大冬木」</strong>が茶缶に掲載。冬につぼみのある木に想いを語り、自身の可能性を表現した。</p>
                     </div>
                 </div>
             </div>
@@ -186,39 +179,55 @@
         <div class="category-section">
             <div class="category-header">
                 <h3>Android</h3>
-                [span_29](start_span)<p>1年間で20アプリをリリース、350万の売上を達成[span_29](end_span)</p>
+                <p>1年間で20アプリをリリース、350万の売上を達成</p>
             </div>
 
             <div class="activity-list">
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/android/02.png"></div>
+                    <div class="img-box"><img src="img/activity/android/02.png" alt="電波回復"></div>
                     <div class="text-box">
-                        <h4>電波回復 【有料：185万OVER】</h4>
-                        [span_30](start_span)<p>開発開始から2時間でリリースし、1年間で185万以上の売上を記録[span_30](end_span)[span_31](start_span)。現存する同種アプリの元祖[span_31](end_span)。</p>
+                        <h4>電波回復 【売上：185万OVER】</h4>
+                        <p>有料アプリ（198円）。開発開始から2時間でリリースし、費用対効果で最大の成功作となった。現存する同種アプリの中で最初にリリースされた元祖アプリ。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/android/01.png"></div>
+                    <div class="img-box"><img src="img/activity/android/01.png" alt="怖い話"></div>
                     <div class="text-box">
-                        <h4>ネットで流れた怖い話 【120万OVER】</h4>
-                        [span_32](start_span)<p>1年間で120万以上の売上を記録し、書籍・恐怖系アプリで人気1位を獲得[span_32](end_span)。</p>
+                        <h4>ネットで流れた怖い話 【売上：120万OVER】</h4>
+                        <p>無料アプリ。書籍・恐怖系アプリで人気1位を記録。電波の届かない場所でも読める設計が支持され、20以上の雑誌で定番として紹介された。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/android/03.png"></div>
+                    <div class="img-box"><img src="img/activity/android/03.png" alt="バッテロイド"></div>
                     <div class="text-box">
-                        <h4>バッテロイド 【30万OVER】</h4>
-                        [span_33](start_span)<p>バッテリー残量を表示するウィジェットアプリ[span_33](end_span)[span_34](start_span)。全12種類を展開し、女性向けシリーズもリリース[span_34](end_span)。</p>
+                        <h4>バッテロイド 【売上：30万OVER】</h4>
+                        <p>有料（198~498円）。バッテリー残量表示ウィジェット。全12種類を展開し、女性向けシリーズもリリース。大手ニュースサイトにも掲載された。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/android/05.png"></div>
+                    <div class="img-box"><img src="img/activity/android/05.png" alt="ModokiClock"></div>
                     <div class="text-box">
-                        <h4>ModokiClock 【13,800円】</h4>
-                        [span_35](start_span)<p>独自ブランド「Modoki」の高級時計ウィジェット[span_35](end_span)[span_36](start_span)。フランスでも購入された実用的高級アプリ[span_36](end_span)。</p>
+                        <h4>ModokiClock 【単価：13,800円】</h4>
+                        <p>独自ブランド「Modoki」の高級時計ウィジェット。実用性のある高級アプリとして、フランスでも購入された実績を持つ。</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="img-box"><img src="img/activity/android/06.png" alt="StopCryingBaby"></div>
+                    <div class="text-box">
+                        <h4>StopCryingBaby 【無料】</h4>
+                        <p>赤ちゃんが泣き止むTV砂嵐動画再生アプリ。世界的に最もダウンロードされた。企画・デザインを主導し、有志4名で制作。</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="img-box"><img src="img/activity/android/07.png" alt="SMA*POTOアプリ"></div>
+                    <div class="text-box">
+                        <h4>SMA*POTO 【スマホアプリ版】</h4>
+                        <p>スマホでポートフォリオを公開する先駆け。本WEBサイトを表示し、各業種企業への提案活動の場として活用。</p>
                     </div>
                 </div>
             </div>
@@ -227,24 +236,23 @@
         <div class="category-section">
             <div class="category-header">
                 <h3>Web & Writing</h3>
-                [span_37](start_span)<p>動画ブログ「ココローグ」を軸とした多角的なWEB活動[span_37](end_span)</p>
+                <p>動画ブログ「ココローグ」を軸としたWEB制作実績</p>
             </div>
 
             <div class="activity-list">
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/web/01.png"></div>
+                    <div class="img-box"><img src="img/activity/web/01.png" alt="ココローグ"></div>
                     <div class="text-box">
-                        <h4>動画ブログ「ココローグ」</h4>
-                        [span_38](start_span)<p>YouTube開始以前より動画ブログとして運営し、アルファブログへ成長[span_38](end_span)[span_39](start_span)。ページランク「5」を達成[span_39](end_span)。</p>
-                        [span_40](start_span)<div class="detail-info">計11の実験ブログを運営し、ワイヤーフレーム作成から一貫して制作[span_40](end_span)。</div>
+                        <h4>動画ブログ「ココローグ」運営</h4>
+                        <p>YouTube開始以前より動画ブログとして運営し、月間100万PVを達成。計11の実験ブログを運営し、ワイヤーフレーム作成から一貫して自ら制作した。SEOを極めページランク「5」を達成。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/writing/03.png"></div>
+                    <div class="img-box"><img src="img/activity/writing/03.png" alt="YouTube大辞典"></div>
                     <div class="text-box">
                         <h4>YouTube大辞典 企画</h4>
-                        [span_41](start_span)<p>雑誌のブログ書籍化企画で提出し、ノミネートされた実績[span_41](end_span)。</p>
+                        <p>雑誌「ネットランナー」のブログ書籍化企画にて提出し、ノミネートされた実績。お正月の大型記事執筆や企業案件の連載（Writing 02）も多数経験。</p>
                     </div>
                 </div>
             </div>
@@ -253,39 +261,45 @@
         <div class="category-section">
             <div class="category-header">
                 <h3>Other</h3>
-                [span_42](start_span)<p>演劇、レクリエーション、コミュニティ運営等の企画実績[span_42](end_span)</p>
+                <p>演劇、レクリエーション、コミュニティ運営等の企画実績</p>
             </div>
 
             <div class="activity-list">
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/other/02.png"></div>
+                    <div class="img-box"><img src="img/activity/other/02.png" alt="演劇祭"></div>
                     <div class="text-box">
                         <h4>駆け込み演劇祭 企画長</h4>
-                        [span_43](start_span)<p>近畿大・大阪大・大阪工業大の3校を統括した演劇祭を主催し、脚本・演出を担当[span_43](end_span)。</p>
+                        <p>大学2年時、学生主催の演劇祭にて近畿大・大阪大・大阪工業大の3校を統括。一心寺シアターにて3週間のイベントを開催。脚本・演出を担当した。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/other/04.png"></div>
+                    <div class="img-box"><img src="img/activity/other/01.png" alt="秋のレクリエーション"></div>
+                    <div class="text-box">
+                        <h4>秋のレクリエーション 企画長</h4>
+                        <p>コンピュータ専門学校3年時、3,000人以上の学生を統括するイベントを扇町公園で開催。屋外開催のための公的許可取得に奔走し成功させた。</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="img-box"><img src="img/activity/other/04.png" alt="ペタリンガー"></div>
                     <div class="text-box">
                         <h4>ペタリンガー参画</h4>
-                        [span_44](start_span)<p>アルファブログ・著名人をシール化する企画に参加[span_44](end_span)[span_45](start_span)。希少な本物のキラキラ素材で制作された[span_45](end_span)。</p>
+                        <p>著名人をシール化する「ペタリンガー」企画に参加。ビックリマンシールと同等の希少なキラキラ素材で制作されたアーカイブ。</p>
                     </div>
                 </div>
 
                 <div class="activity-item">
-                    <div class="img-box"><img src="img/activity/other/05.png"></div>
+                    <div class="img-box"><img src="img/activity/other/05.png" alt="PR活動"></div>
                     <div class="text-box">
-                        <h4>各種ブロガーPR活動</h4>
-                        [span_46](start_span)<p>USJの新イベント体験やセガの新サービス発表会に参加し、新製品レビューを担当[span_46](end_span)。</p>
+                        <h4>ブロガーPR・新製品レビュー</h4>
+                        <p>USJのイベント体験やSEGAの新サービス発表会への参加、新製品の使用感レビューなど、アルファブロガーとして数々の企業企画に参画。</p>
                     </div>
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <footer id="footer">
+    </div> <footer id="footer">
         <p>SMA*POTO : ポートフォリオ</p>
         <p><a href="http://smartphone-portfolio.com/">http://smartphone-portfolio.com/</a></p>
         <small>Copyright © SMA*POTO, all rights reserved.</small>
