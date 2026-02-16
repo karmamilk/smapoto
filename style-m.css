@@ -1,66 +1,63 @@
-/* ### 基本的なレイアウト ### */
+@charset "UTF-8";
 
-#container	{width: 620px;}
+/* ### 基本的なレイアウト（タブレット・横向き） ### */
+#container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-
-/* ### コンテンツ部分の記事のレイアウト ### */
-.post	{width: 300px;
-	margin-right: 20px;}
-
-.post:nth-child(even)	{margin-right: 0;}
-
-
-/* ### コンテンツ ### */
-
-/* 記事 */
-.post img	{width: 300px;}
-
-.post h2	{font-size: 22px;}
-
-.post p	{font-size: 16px;}
-
-.post .more_s	{font-size: 18px;}
-
-
+/* ### コンテンツ部分 ### */
+.post, .post-free {
+    float: left;
+    width: 65%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+}
 
 /* ### ヘッダー ### */
+#site {
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+}
+#site h1 { margin: 0; font-size: 24px; }
+#site h2 { margin: 0; font-size: 14px; font-weight: normal; color: #ccc; }
+#site a { color: #fff; text-decoration: none; }
 
-/* ナビゲーションメニュー */
-#nav	{padding-top: 0;}
+/* ### メニュー ### */
+#menu {
+    overflow: hidden;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+#menu li {
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+#menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-right: 1px solid #ddd;
+}
+#menu li a:hover {
+    background-color: #ddd;
+}
 
-#nav li:nth-child(2)	{float:none;
-	overflow:hidden;}
-
-
-
-/* ### ヘッダー記事 ### */
-#headerpost	{position: relative;}
-
-#headerpost img	{float: none;}
-
-#headerpost #lead	{float: none;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.7);
-	width: auto;
-	padding: 10px 20px;
-	margin: 0;}
-
-#headerpost h2	{font-size: 20px;
-	margin: 10px 0 10px 0;}
-
-#headerpost p	{font-size: 14px;
-	margin: 0 0 20px 0;}
-
-#headerpost .date	{float: left;
-	margin: 0;}
-
-#headerpost .more	{float: right;
-	margin: -12px 15px 0px 0;}
-
-
-
-/* jQuery Mobile */
-[data-role="page"]	{padding-top: 0!important;}
-
+/* ### フッター ### */
+#footer {
+    clear: both;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+#footer a { color: #fff; }
